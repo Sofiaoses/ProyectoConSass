@@ -1,3 +1,17 @@
+@import "variables.scss";
+
+@mixin priTitulo( $tamanioPadding){
+
+	margin-left: 1%;
+	padding-top: $tamanioPadding;
+
+}
+
+@mixin Imagenes {
+	width: 300px;
+	height: 450px;
+}
+ 
 * {
 	margin: 0%;
 	padding: 0;
@@ -6,7 +20,7 @@ nav {
 	width: 100%;
 	align-items: center;
 	text-align: center;
-	background-color: black;
+	background-color: $colorprimario;
 	position: fixed;
 	top: 0;
 }
@@ -17,48 +31,50 @@ ul {
 	top: 0;
 	display: flex;
 	font-size: medium;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: $fuenteLetra;
 	text-align: center;
 	overflow: hidden;
 	list-style-type: none;
 }
 li {
-	font: white;
+	font: $colorsecundario;
 	float: left;
 	a {
 		display: block;
-		color: white;
+		color: $colorsecundario;
 		text-align: center;
 		padding: 14px 16px;
 		transition: all 0.7s;
 		&:hover {
-			background-color: palevioletred;
+			background-color: $colorterciario;
 		}
 	}
 }
+
+
+
+
+
 h1.primertitulo {
-	margin-left: 1%;
-	padding-top: 50px;
+	@include priTitulo( 50px);
 }
 p.primerparrafo {
-	margin-left: 1%;
-	font-size: large;
+	@include priTitulo( 0px);
 }
 div.grillaindex {
 	display: grid;
 	padding-bottom: 30px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 800px 20px 800px 20px;
-	background-image: linear-gradient(to bottom, white 80%, rgb(56, 55, 55));
+	background-image: linear-gradient(to bottom, $colorsecundario 80%, rgb(56, 55, 55));
 	align-items: flex-end;
 }
 div.imagenespasarela {
-	display: grid;
-	align-items: flex-end;
-	grid-template-columns: 1fr 1fr 1fr;
+	@extend div.grillaindex;
+	
+grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 800px 20px 800px 20px 800px 20px 800px 20px 800px 20px 1100px 20px 800px 20px 800px 20px 1100px 20px 800px 20px;
-	padding-bottom: 30px;
-	background-image: linear-gradient(to bottom, white 95%, rgb(56, 55, 55));
+	background-image: linear-gradient(to bottom, $colorsecundario 95%, rgb(56, 55, 55));
 }
 #imagen1 {
 	border: 1px silver solid;
@@ -72,19 +88,19 @@ div.imagenespasarela {
 	grid-template-rows: 430px 20px 600px 20px 680px 20px 700px 20px 670px 20px 580px 20px;
 	align-items: flex-end;
 	padding-bottom: 30px;
-	background-image: linear-gradient(to bottom, white 90%, rgb(56, 55, 55));
+	background-image: linear-gradient(to bottom, $colorsecundario 90%, rgb(56, 55, 55));
 }
 footer {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 100%;
-	background-color: black;
+	background-color: $colorprimario;
 	position: absolute;
 	text-align: center;
 	align-items: center;
 }
 h3 {
-	color: white;
+	color: $colorsecundario;
 }
 @media (min-width:200px) and (max-width:576px) {
 	nav {
@@ -92,7 +108,7 @@ h3 {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		background-color: black;
+		background-color: $colorprimario;
 		bottom: 20px;
 	}
 	ul {
@@ -106,14 +122,11 @@ h3 {
 		flex-direction: column;
 	}
 	h1.primertitulo {
-		margin-left: 1%;
-		padding-bottom: 100px;
+		@include priTitulo( 100px);
 	}
 	p.primerparrafo {
-		margin-left: 1%;
-		margin-top: 1%;
-		padding-top: 50px;
-		font-size: large;
+		@include priTitulo( 50px);
+		
 	}
 	div.grillaindex {
 		grid-template-columns: 100%;
@@ -122,12 +135,10 @@ h3 {
 		padding-top: 50px;
 	}
 	#imagen1 {
-		width: 300px;
-		height: 450px;
+		@include Imagenes;
 	}
 	#imagen2 {
-		width: 300px;
-		height: 450px;
+		@include Imagenes;
 	}
 }
 @media (min-width:576px) and (max-width:768px) {
@@ -135,13 +146,12 @@ h3 {
 		width: 100%;
 		align-items: center;
 		text-align: center;
-		background-color: black;
+		background-color: $colorprimario;
 		position: fixed;
 		top: 0;
 	}
 	h1.primertitulo {
-		margin-left: 1%;
-		padding-bottom: 20px;
+		@include priTitulo( 20px);
 	}
 	div.grillaindex {
 		grid-template-columns: 100%;
@@ -150,11 +160,11 @@ h3 {
 		padding-top: 50px;
 	}
 	#imagen1 {
-		width: 300px;
-		height: 450px;
+		@include Imagenes;
 	}
 	#imagen2 {
-		width: 300px;
-		height: 450px;
+		@include Imagenes;
 	}
 }
+
+

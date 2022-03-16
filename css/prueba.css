@@ -114,7 +114,28 @@ h3 {
     height: 450px; }
   #imagen2 {
     width: 300px;
-    height: 450px; } }
+    height: 450px; }
+  #maquillaje2 {
+    width: 440px;
+    height: 410px; }
+  #maquillaje4 {
+    width: 400px;
+    height: 529px; }
+  #maquillaje5 {
+    width: 400px;
+    height: 489px; }
+  div.imagenespasarela {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 570px 35px 570px 35px 570px 35px 570px 35px 570px 35px 570px 35px 570px 35px 570px 35px 570px 35px 570px 35px; }
+  #pasarela1 {
+    width: 300px;
+    height: 550px; }
+  #pasarela2 {
+    width: 280px;
+    height: 520px; }
+  #pasarela3 {
+    width: 382px;
+    height: 524px; } }
 
 @media (min-width: 576px) and (max-width: 768px) {
   nav {

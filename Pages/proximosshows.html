@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Formularios, Informacion de shows, Entradas para los shows, Entrada a la Fashion Week">
-    <meta name="description" content="Esta pagina cuenta con información la Fashion Week y shows de temporada. Información acerca de las entrada<s a los shows privados de las marcas de moda de la Alta Costura. ">
-    <title>Formulario para atender a un sho0w de Moda</title>
+    <meta name="description" content="Esta pagina cuenta con información la Fashion Week y shows de temporada. Información acerca de las entradas a los shows privados de las marcas de moda de la Alta Costura. ">
+    <title>Formulario para atender a un show de Moda</title>
     <link rel="shortcut icon" href="../Imagenes/shutterstock_1197572524.jpg">
     <link rel="stylesheet" href="../css/prueba.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -16,79 +16,92 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+    
+        <div class="divdelnav">   
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="../index.html">Home</a></li>
+                    <li class="nav__li"><a href="galeria.html">Galería</a></li>
+                    <li class="nav__li"><a href="pasarela.html">Pasarelas</a></li>
+                    <li class="nav__li"><a href="proximosshows.html">Próximos shows</a></li>
+                    <li class="nav__li"><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                </ul>
 
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="pasarela.html">Pasarelas</a></li>
-            <li><a href="proximosshows.html">Próximos shows</a></li>
-            <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                <ul class="nav__responsive-ul">
+                    <div class="nav__responsive-button-container">
+                        <div class="nav__responsive-button"><i class="fa-solid fa-bars"></i></div>
+                    </div>
+                    <div class="nav__li-container">
+                        <li class="nav__responsive-li"><a href="../index.html">Home</a></li>
+                        <li class="nav__responsive-li"><a href="galeria.html">Galería</a></li>
+                        <li class="nav__responsive-li"><a href="pasarela.html">Pasarelas</a></li>
+                        <li class="nav__responsive-li"><a href="proximosshows.html">Próximos shows</a></li>
+                        <li class="nav__responsive-li"><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                    </div>
+            
+                </ul>
+            </nav>
+        </div> 
+    </header>
 
-
-            </ul>
-
-        </nav>
-
-
-        <main>
+        <main class="proximosShows">
             <div>
                 <h1 class="primertitulo">Próximos Shows</h1>
                 <p>¿Querés información sobre los próximos shows? ¿Querés ser parte de algún show próximo?</p>
                 <p>Completá el formulario y te estaremos contactando dentro de poco.</p>
             </div>
  
- </header>
-        <article>
+ 
+            <article>
             
 
 
-            <form>
+                <form>
                
-                <p>Razón del formulario</p>
-                <select name="razón" id="razon-formulario"> 
-                 <option value="Consulta">Consulta</option>
-                 <option value="Información">Información</option>
-                 <option value="Petición">Petición</option>
-                </select><br>
+                    <p>Razón del formulario</p>
+                    <select name="razón" id="razon-formulario"> 
+                    <option value="Consulta">Consulta</option>
+                    <option value="Información">Información</option>
+                    <option value="Petición">Petición</option>
+                    </select><br>
 
-            <label for="Nombre">Nombre</label>   
-            <input type="name" placeholder="Ingrese su Nombre y Apellido" id="Nombre"><br>
+                    <label for="Nombre">Nombre</label>   
+                    <input type="name" placeholder="Ingrese su Nombre y Apellido" id="Nombre"><br>
 
-            <label for="Email">Email</label>
-            <input type="email" placeholder="Ingrese su mail" id="Email"><br>
+                    <label for="Email">Email</label>
+                    <input type="email" placeholder="Ingrese su mail" id="Email"><br>
 
-            <label for="Fecha">Fecha</label>
-            <input type="date" id="Fecha"><br>
+                    <label for="Fecha">Fecha</label>
+                    <input type="date" id="Fecha"><br>
 
-            <label for="Consulta">Consulta</label>
-            <textarea name="" id="" cols="30" rows="10" id="Consulta"></textarea><br>
+                    <label for="Consulta">Consulta</label>
+                    <textarea name="" id="" cols="30" rows="10" id="Consulta"></textarea><br>
 
-         <div><p>¿Sos mayor de edad?</p>
-            <div>Si
-                <input type="radio" name="edad" value="Si">
-            </div>
-            <div>No
-                <input type="radio" name="edad" value="No">
-            </div><br>
+                    <div><p>¿Sos mayor de edad?</p>
+                        <div>Si
+                            <input type="radio" name="edad" value="Si">
+                        </div>
+                    <div>No
+                        <input type="radio" name="edad" value="No">
+                    </div><br>
 
         
 
-            <input type="submit">
-            <input type="reset">
+                    <input type="submit">
+                    <input type="reset">
 
 
-            </form>
-        </article>
+                </form>
+            </article>
 
     
         </main>
 
    
      <footer>
-		<h3>LOGO</h3>
-		<h3>RRSS</h3>
-		<h3>CONTACTO</h3>
+        <h3>Contacto: +5491122334455</h3>
+        <h3><i class="fa-solid fa-person-dress"></i></h3>
+        <h3>sofioses99@hotmail.com</h3>
 	</footer>
 
 
